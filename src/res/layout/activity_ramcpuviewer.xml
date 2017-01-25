@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ramcpuviewer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.traz.systemstatus.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="bottom">
+
+            <TextView
+                android:text="CPU:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelCPUUsage"
+                android:layout_weight="0.13"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCPUFreq"
+                android:layout_weight="0.1"
+                android:text="Max Freq: "
+                android:gravity="center_vertical|center_horizontal" />
+
+            <TextView
+                android:text="100% Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelCPUTotal"
+                android:layout_weight="0.1"
+                android:textAlignment="textEnd" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCpuPerc"
+            android:layout_weight=".2"
+            android:gravity="bottom|left" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CpuBar"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/OtherButton"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.15"
+            android:layout_marginBottom="5dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartCPUUsage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textXLabel"
+            android:layout_weight="0.2"
+            android:gravity="center_horizontal"
+            android:text="Time (seconds)"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.4"
+            android:gravity="bottom">
+
+            <TextView
+                android:text="RAM:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/labelRAMUsage"
+                android:layout_weight="1"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textUsedRam"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTotalRam"
+                android:layout_weight="1"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textRamPerc"
+            android:layout_weight="0.2"
+            android:gravity="bottom|left" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RamBar"
+            android:layout_below="@+id/internalbar"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.15" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:layout_weight="1.14"
+            android:gravity="bottom|center_horizontal">
+
+            <Button
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonBack"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
